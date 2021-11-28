@@ -1,0 +1,195 @@
+body {
+    direction: rtl;
+    font-family: 'Amiri', serif;
+}
+:root {
+    --main-color: #3498db;
+    --sacend-color: #ff8000;
+    --main-border: 3px solid var(--main-color);
+    --sacend-background: #fff4de;
+    --section-padding: 35px 15px; 
+    --size-heding: 30px;
+    --text-color: #2c3e51;
+    --button-border: 3px solid white;
+}
+a {
+    display: block;
+    text-decoration: none;
+    
+}
+.content {
+    padding: 0 10px;
+}
+header {
+    /* min-height: 40px; */
+    max-height: 30px;
+    padding: 15px 10px;
+    border-bottom: var(--main-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .toggel {
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+header .toggel span {
+    width: 100%;
+    margin-bottom: 5px;
+    height: 4px;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+header .logo {
+    padding: 15px 10px;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+header ul a {
+    padding: 20px 0;
+}
+section.content {
+    padding: var(--section-padding);
+}
+.content .show-text {
+    box-shadow: -2px 1px 17px -7px var(--main-color);
+}
+.content .show-text h2 {
+    text-align: center;
+    color: var(--main-color);
+    padding: 45px;
+    margin-top: 0;
+    font-size: var(--size-heding);
+    background-color: var(--sacend-background);
+}
+.show-text .alzekr {
+    padding: 0 10px;
+    min-height: 45vh;
+}
+.show-text .alzekr span {
+    color: var(--sacend-color);
+    font-size: 20px;
+    padding: 0 0 20px;
+    display: block;
+}
+.show-text .alzekr p {
+    color: var(--text-color);
+    line-height: 2.2;
+    font-size: 19px;
+    font-weight: bold;
+}
+.show-text .info-text {
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 0 0 40px;
+}
+.content .clicked {
+    margin-top: 15px;
+    display: flex;justify-content: space-between;
+}
+.content .clicked button:nth-child(1) {
+    width: 100%;
+}
+.content .clicked button {
+    padding: 15px 0;
+    background-color: var(--main-color);
+    border:  var(--button-border);
+    color: white;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    animation-name: ops;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+}
+@keyframes ops {
+    to {
+        opacity: .7;
+    }
+}
+.content .clicked button:hover {
+    background-color: white;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+}
+.content .clicked button .count-zekr {
+    font-size: 18px;
+    font-weight: bold;
+}
+.landing .text {
+    margin: 0 0 60px;
+}
+.landing .text h3 {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 30px;
+}
+.landing .text p {
+    color: #777;
+}
+.landing .selcted {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+.landing .selcted button {
+    margin: 0 0 30px;
+    padding: 20px 0;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    border: var(--main-border);
+}
+.landing .selcted button:hover {
+    background-color: white;
+    color: var(--main-color);
+    border: 3px solid var(--main-color);
+}
+footer .content {
+    display: flex;
+    flex-direction: column;
+}
+footer .content .contact {
+    max-width: 100%;
+}
+footer .content .contact p {
+    width: fit-content;
+    padding: 0 0 10px 10px;
+    margin: 0 0 40px;
+    display: block;
+    border-bottom: var(--main-border);
+}
+footer .content .contact a {
+    display: inline;
+    margin: 5px 15px 0;
+    border-bottom: 1px solid var(--main-color);
+    color: var(--text-color);
+}
+
+footer .content .copy {
+    margin-top: 25px;
+    max-height: 45px;
+    border-top: var(--main-border);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .content .copy a {
+    padding: 0;
+}

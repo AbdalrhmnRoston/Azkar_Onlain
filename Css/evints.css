@@ -1,0 +1,49 @@
+.open-ul {
+    width: 80%;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: var(--main-border);
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.close-ul {
+    position: absolute;
+    right: -100%;
+    transform: rotate(180deg);
+    -webkit-transform: r(100%);
+    -moz-transform: r(100%);
+    -ms-transform: r(100%);
+    -o-transform: r(100%);
+}
+button {
+    transition:  1s;
+    -webkit-transition:  1s;
+    -moz-transition:  1s;
+    -ms-transition:  1s;
+    -o-transition:  1s;
+}
+.button-close {
+    display: none;
+}
+.button-open {
+    width: 50%;
+    display: block;
+}
+.width-50 {
+    width: 50% !important;
+}
