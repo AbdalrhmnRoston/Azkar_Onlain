@@ -23,15 +23,10 @@
 
 
 
-
-
-
-
-
-
-
 logo.onclick = function () {
     let landing = document.getElementById('landing');
     azkarAlspah.style.display = 'none';
     landing.style.display = 'block';
 }
+
+
