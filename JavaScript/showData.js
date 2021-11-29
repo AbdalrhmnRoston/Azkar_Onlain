@@ -1,4 +1,6 @@
 
+// Date Application Save Hear  
+
 let allZekr = {
     zekr1: {
         head: 'أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ',
@@ -189,18 +191,9 @@ let allZekr = {
 };
 
 
-
-
-    console.log(allZekr[`zekr${25}`]['text']);
-
-
-
+    ///////////////////////// All Tags In Html
 
     let content1 = document.getElementById('azkar-alspa7');
-
-
-
-
     let selectedSection = document.querySelector('.show-text h2');
     let headText = document.querySelector('.show-text .alzekr span');
     let textShow = document.querySelector('.show-text .alzekr p');
@@ -208,60 +201,58 @@ let allZekr = {
     let buttonZekr = document.querySelector('#count-zekr'); 
     let countZekr = document.querySelector('#count-zekr span'); 
     let nextZekr = document.querySelector('#next-zekr'); 
-
-
-    let rsultZekr = countZekr.innerHTML;
-
-
-
-
-buttonZekr.onclick = () =>  countZekr.innerHTML > 0 ? countZekr.innerHTML -= 1 : '';
-
-buttonZekr.addEventListener('click', function () { countZekr.innerHTML == 0 ? nextZekr.className = 'button-open' : ''; });
-buttonZekr.addEventListener('click', function () { countZekr.innerHTML == 0 ? buttonZekr.className = 'width-50' : ''; });
-
-
-
-
-
-
-let genret = 1;
-
-    nextZekr.onclick = function () {
-
-            genret += 1;
-
-            headText.innerHTML = allZekr[`zekr${genret}`].head;
-            textShow.innerHTML = allZekr[`zekr${genret}`].text;
-            infoText.innerHTML = allZekr[`zekr${genret}`].info;
-            countZekr.innerHTML = allZekr[`zekr${genret}`].number;
-
-    }
-
-    nextZekr.addEventListener('click', function () {
-                nextZekr.className = 'button-close'
-                buttonZekr.setAttribute('class', '');
-    })
-
-
-
-
-
-    content1.style.display = 'none';
-
     let selectAlspah = document.getElementById('select-alspah');
     let selectAlmsaa = document.getElementById('select-almsaa');
     let landing = document.getElementById('landing');
 
 
-    selectAlspah.onclick = function () {
-        content1.style.display = 'block';
-        landing.style.display = 'none';
-    }
+    ///  المتغيرات التي تعتمد علي بيانات خارجية 
 
-    selectAlmsaa.onclick = function () {
-        content1.style.display = 'block';
-        landing.style.display = 'none';
-        selectedSection.innerHTML = selectAlmsaa.innerHTML;
-}
+    let date = new Date().getDate();
+    let month = new Date().getMonth()+1;
+    let year = new Date().getFullYear();
+    let minutes = new Date().getMinutes();
+    let hours = new Date().getHours();
+
+
+    // التحقق من ان زر العد في التطبيق يساوي صفر لكي يقوم بأظهار زر (التالي)
+
+buttonZekr.onclick = () =>  countZekr.innerHTML > 0 ? countZekr.innerHTML -= 1 : '';
+buttonZekr.addEventListener('click', function () { countZekr.innerHTML == 0 ? nextZekr.className = 'button-open' : ''; });
+buttonZekr.addEventListener('click', function () { countZekr.innerHTML == 0 ? buttonZekr.className = 'width-50' : ''; });
+
+
+
+    /// يتم الاعتماد علي قيمة المتغير جينيريت لاستدعاء الذكر بالترتيب من الاوبجكت الذي يحتوي علي البيانات في الاعلي
+let genret = 1;
+    nextZekr.onclick = function () {
+        genret += 1;
+            headText.innerHTML = allZekr[`zekr${genret}`].head;
+            textShow.innerHTML = allZekr[`zekr${genret}`].text;
+            infoText.innerHTML = allZekr[`zekr${genret}`].info;
+            countZekr.innerHTML = allZekr[`zekr${genret}`].number;
+        genret > 31 ? genret = 1 : '';
+    };
+
+
+
+    /// ظهور و اختفاء زر (التالي) عن طريق الضغط علية فيتم تغيير الكلاس بكلاس اخر موجود في ملف (evints.css)
+    nextZekr.addEventListener('click', function () {
+                nextZekr.className = 'button-close'
+                buttonZekr.setAttribute('class', '');
+    });
+
+    /// التحكم في الازرار الموجودة في صفحة الهبوط
+
+    selectAlspah.onclick = () => {`${content1.style.display = 'block'} ${landing.style.display = 'none'}`;};
+    selectAlmsaa.onclick = () => {`${content1.style.display = 'block'} ${landing.style.display = 'none'} ${selectedSection.innerHTML = selectAlmsaa.innerHTML}`;};
+
+
+
+    let autoClickAlspah = () => selectAlspah.onclick();
+    let autoClickMasaa = () => selectAlmsaa.onclick();
+    
+    hours >= 13 ? autoClickMasaa() : autoClickAlspah();
+
+
 
