@@ -253,6 +253,3 @@ let genret = 1;
     let autoClickMasaa = () => selectAlmsaa.onclick();
     
     hours >= 13 ? autoClickMasaa() : autoClickAlspah();
-
-
-
