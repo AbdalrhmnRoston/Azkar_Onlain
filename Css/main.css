@@ -160,6 +160,7 @@ section.content {
     color: var(--text-color);
     font-weight: bold;
     font-size: 35px;
+    padding: 45px 0 20px;
 }
 .landing .text p {
     color: #777;
