@@ -225,6 +225,11 @@ section.content {
     /* border: 1px solid var(--sacend-background); */
     box-shadow: var(--main-shadow);
     font-size: 34px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 .count-ast2far .back-data .cercil-plus {
     width: 200px;
