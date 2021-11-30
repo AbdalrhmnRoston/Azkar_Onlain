@@ -1,4 +1,3 @@
-
 // Date Application Save Hear  
 
 let allZekr = {
@@ -204,7 +203,17 @@ let allZekr = {
     let selectAlspah = document.getElementById('select-alspah');
     let selectAlmsaa = document.getElementById('select-almsaa');
     let landing = document.getElementById('landing');
-
+    let showText = document.querySelector('.show-text');
+    let selectCountAs2far = document.getElementById('count-as2far');
+    let spanAst2far = document.querySelector('.count-ast2far .front-data .ast2far span');
+    let spanAlhsnat = document.querySelector('.count-ast2far .front-data .alhsnat span');
+    let cercilPlus = document.querySelector('.count-ast2far .back-data .cercil-plus');
+    let restartAs2far = document.querySelector('.count-ast2far .back-data .restart');
+    let cercilPlusAfter = document.querySelector('.count-ast2far .back-data .cercil-plus::after');
+    let sectionAst2far = document.querySelector('.count-ast2far');
+    let body = document.getElementsByTagName('body');
+    let allSection = document.querySelectorAll('section');
+    let logo = document.getElementById('logo');
 
     ///  المتغيرات التي تعتمد علي بيانات خارجية 
 
@@ -235,7 +244,6 @@ let genret = 1;
     };
 
 
-
     /// ظهور و اختفاء زر (التالي) عن طريق الضغط علية فيتم تغيير الكلاس بكلاس اخر موجود في ملف (evints.css)
     nextZekr.addEventListener('click', function () {
                 nextZekr.className = 'button-close'
@@ -244,12 +252,44 @@ let genret = 1;
 
     /// التحكم في الازرار الموجودة في صفحة الهبوط
 
-    selectAlspah.onclick = () => {`${content1.style.display = 'block'} ${landing.style.display = 'none'}`;};
+    selectAlspah.onclick = () => {`${content1.style.display = 'block'} ${landing.style.display = 'none'} ${selectedSection.innerHTML = selectAlspah.innerHTML}`;};
     selectAlmsaa.onclick = () => {`${content1.style.display = 'block'} ${landing.style.display = 'none'} ${selectedSection.innerHTML = selectAlmsaa.innerHTML}`;};
-
 
 
     let autoClickAlspah = () => selectAlspah.onclick();
     let autoClickMasaa = () => selectAlmsaa.onclick();
     
-    hours >= 13 ? autoClickMasaa() : autoClickAlspah();
+    // hours <= 12 ?  autoClickAlspah(): autoClickMasaa();
+
+    let landButns = document.querySelectorAll('.landing button');
+    let countBtnLand = landButns.length;
+
+// for (let i = 0; i < countBtnLand; i++) {
+//     landButns[i].style.cursor = 'pointer';
+//         landButns[i].addEventListener('click', function () {
+//             genret = 1;
+//                 headText.innerHTML = allZekr[`zekr${genret}`].head;
+//                 textShow.innerHTML = allZekr[`zekr${genret}`].text;
+//                 infoText.innerHTML = allZekr[`zekr${genret}`].info;
+//                 countZekr.innerHTML = allZekr[`zekr${genret}`].number;
+//     });
+// };
+
+    let counterAs2far = 0;
+    cercilPlus.onclick = function () {
+        counterAs2far += 1;
+        spanAst2far.innerHTML = counterAs2far; 
+        spanAlhsnat.innerHTML = counterAs2far * 10; 
+    }
+    restartAs2far.onclick = function () {
+        counterAs2far = 0;
+        spanAst2far.innerHTML = counterAs2far; 
+        spanAlhsnat.innerHTML = counterAs2far * 10;
+    }
+    selectCountAs2far.onclick = function () {
+        sectionAst2far.setAttribute('class', 'count-ast2far display-block');
+        landing.style.display = 'none';
+        content1.style.display = 'none';
+    }
+
+    logo.onclick = () => window.location.reload();
