@@ -69,6 +69,8 @@ header .logo {
 }
 
 header ul {
+    width: 70%;
+    height: fit-content;
     padding: 0;
     background-color: var(--sacend-background);
 }
@@ -211,19 +213,19 @@ section.content {
     padding: 30px 0 35px;
     font-weight: 600;
     font-size: 22px;
+    font-weight: bold;
 }
 .count-ast2far .front-data span {
     width: 100px;
     display: block;
-    font-size: 29px;
+    font-size: 45px;
     color: var(--sacend-background);
     border: 3px solid var(--sacend-background);
 }
 .count-ast2far .back-data h3 {
-    margin: 30px 0 0;
+    margin: 60px 0 0;
     text-align: center;
     padding: 20px 0;
-    /* border: 1px solid var(--sacend-background); */
     box-shadow: var(--main-shadow);
     font-size: 34px;
     border-radius: 10px;
@@ -274,13 +276,6 @@ section.content {
     padding: 5px 10px;
     cursor: pointer;
 }
-
-
-
-
-
-
-
 footer .content {
     display: flex;
     flex-direction: column;
