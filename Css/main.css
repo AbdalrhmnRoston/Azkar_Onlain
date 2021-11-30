@@ -3,17 +3,23 @@ body {
     font-family: 'Amiri', serif;
 }
 :root {
-    --main-color: #3498db;
+    --main-color: white;
     --sacend-color: #ff8000;
-    --main-border: 3px solid var(--main-color);
-    --sacend-background: #fff4de;
+    --sacend-background: #3498db;
+    --main-border: 3px solid var(--sacend-background);
     --section-padding: 35px 15px; 
     --size-heding: 30px;
     --text-color: #2c3e51;
     --button-border: 3px solid white;
+    --main-shadow: inset 0px 0px 30px 27px #3498db;
 }
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    line-height: 1.8;
 }
 a {
     display: block;
@@ -29,6 +35,7 @@ header {
     /* max-height: 30px; */
     padding: 12px 10px;
     border-bottom: var(--main-border);
+    background-color: var(--sacend-background);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,9 +67,17 @@ header .logo {
     font-size: 18px;
     cursor: pointer;
 }
+
+header ul {
+    padding: 0;
+    background-color: var(--sacend-background);
+}
 header ul li {
     padding: 20px 0;
-    
+    background-color: var(--sacend-background);
+    color: var(--main-color);    
+    font-weight: bold;
+    border-bottom: 3px solid white;
 }
 section.content {
     padding: var(--section-padding);
@@ -76,12 +91,12 @@ section.content {
     color: var(--main-color);
     padding: 45px;
     margin-top: 0;
-    font-size: var(--size-heding);
+    font-size: var(--size-heding);  
     background-color: var(--sacend-background);
 }
 .show-text .alzekr {
-    padding: 0 10px;
-    min-height: 45vh;
+    padding: 20px 10px 0;
+    min-height: 40vh;
 }
 .show-text .alzekr span {
     color: var(--sacend-color);
@@ -96,9 +111,9 @@ section.content {
     font-weight: bold;
 }
 .show-text .info-text {
-    color: var(--main-color);
+    color: var(--sacend-background);
     font-weight: bold;
-    padding: 0 0 40px;
+    padding: 0 0 10px;
 }
 .content .clicked {
     margin-top: 15px;
@@ -109,7 +124,7 @@ section.content {
 }
 .content .clicked button {
     padding: 15px 0;
-    background-color: var(--main-color);
+    background-color: var(--sacend-background);
     border:  var(--button-border);
     color: white;
     border-radius: 3px;
@@ -130,8 +145,8 @@ section.content {
 }
 .content .clicked button:hover {
     background-color: white;
-    color: var(--main-color);
-    border: 3px solid var(--main-color);
+    color: var(--sacend-background);
+    border: 3px solid var(--sacend-background);
 }
 .content .clicked button .count-zekr {
     font-size: 18px;
@@ -139,11 +154,12 @@ section.content {
 }
 .landing .text {
     margin: 0 0 60px;
+    text-align: center;
 }
 .landing .text h3 {
     color: var(--text-color);
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
 }
 .landing .text p {
     color: #777;
@@ -152,24 +168,117 @@ section.content {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
+    
 }
 .landing .selcted button {
     margin: 0 0 30px;
     padding: 20px 0;
-    background-color: var(--main-color);
-    color: white;
+    background-color: var(--sacend-background);
+    color: var(--main-color);
     font-weight: bold;
     font-size: 22px;
     border: var(--main-border);
 }
 .landing .selcted button:hover {
-    background-color: white;
-    color: var(--main-color);
-    border: 3px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--sacend-background);
+    border: 3px solid var(--sacend-background);
 }
+
+#display-none {
+    display: none !important;
+}
+.display-none {
+    display: none !important;
+}
+#display-block {
+    display: block !important;
+}
+.display-block {
+    display: block !important;
+}
+
+
+
+.count-ast2far .front-data {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.count-ast2far .front-data  p {
+    margin: 0;
+    padding: 30px 0 35px;
+    font-weight: 600;
+    font-size: 22px;
+}
+.count-ast2far .front-data span {
+    width: 100px;
+    display: block;
+    font-size: 29px;
+    color: var(--sacend-background);
+    border: 3px solid var(--sacend-background);
+}
+.count-ast2far .back-data h3 {
+    margin: 30px 0 0;
+    text-align: center;
+    padding: 20px 0;
+    /* border: 1px solid var(--sacend-background); */
+    box-shadow: var(--main-shadow);
+    font-size: 34px;
+}
+.count-ast2far .back-data .cercil-plus {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    background-color: var(--sacend-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.count-ast2far .back-data .cercil-plus p {
+    font-size: 25px;
+    color: var(--main-color);
+}
+.count-ast2far .back-data .restart {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 0 20px;
+    background-color: var(--sacend-color);
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: relative;
+}
+.count-ast2far .back-data .restart::before {
+    content: 'اعادة ضبط';
+    position: absolute;
+    top: -70%;
+    left: -50%;
+    width: 70px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 footer .content {
     display: flex;
     flex-direction: column;
+    padding: 0;
 }
 footer .content .contact {
     max-width: 100%;
@@ -187,10 +296,13 @@ footer .content .contact a {
     border-bottom: 1px solid var(--main-color);
     color: var(--text-color);
 }
-
 footer .content .copy {
     margin-top: 25px;
     max-height: 45px;
+    padding: 10px 0;
+    background-color: var(--sacend-background);
+    color: var(--main-color);
+    font-weight: bold;
     border-top: var(--main-border);
     display: flex;
     justify-content: space-around;
@@ -198,4 +310,6 @@ footer .content .copy {
 }
 footer .content .copy a {
     padding: 0;
+    color: var(--main-color);
+    font-weight: bold;
 }
