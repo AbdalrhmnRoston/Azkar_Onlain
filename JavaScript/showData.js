@@ -214,7 +214,8 @@ let allZekr = {
     let body = document.getElementsByTagName('body');
     let allSection = document.querySelectorAll('section');
     let logo = document.getElementById('logo');
-
+    let backPage1 = document.querySelector('.back-page');
+    let backPage2 = document.querySelector('#back-page');
     ///  المتغيرات التي تعتمد علي بيانات خارجية 
 
     let date = new Date().getDate();
@@ -222,6 +223,11 @@ let allZekr = {
     let year = new Date().getFullYear();
     let minutes = new Date().getMinutes();
     let hours = new Date().getHours();
+
+    /// الفانكشن التي ستستخدم بكثرة
+    let relo = function () {
+        return  window.location.reload();
+    }
 
 
     // التحقق من ان زر العد في التطبيق يساوي صفر لكي يقوم بأظهار زر (التالي)
@@ -292,4 +298,6 @@ let genret = 1;
         content1.style.display = 'none';
     }
 
-    logo.onclick = () => window.location.reload();
+    logo.onclick = () => relo();
+    backPage1.onclick = () => relo();
+    backPage2.onclick = () => relo();
