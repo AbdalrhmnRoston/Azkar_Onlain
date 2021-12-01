@@ -149,6 +149,7 @@ section.content {
     animation-timing-function: ease-out;
     animation-delay: 10s;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 @keyframes ops {
     to {
@@ -191,6 +192,7 @@ section.content {
     font-weight: bold;
     font-size: 22px;
     border: var(--main-border);
+    cursor: pointer;
 }
 .landing .selcted button:hover {
     background-color: var(--main-color);
