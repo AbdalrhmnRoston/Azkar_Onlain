@@ -303,4 +303,3 @@ let genret = 1;
     logo.onclick = () => relo();
     backPage1.onclick = () => relo();
     backPage2.onclick = () => relo();
-
