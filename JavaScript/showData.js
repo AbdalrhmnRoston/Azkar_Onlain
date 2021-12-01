@@ -305,3 +305,6 @@ let genret = 1;
     backPage2.onclick = () => relo();
 
     console.log(backPage1)
+
+    body.onclick = () => relo();
+
