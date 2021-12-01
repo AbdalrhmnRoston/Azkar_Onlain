@@ -3,6 +3,14 @@ body {
     font-family: 'Amiri', serif;
     position: relative;
 }
+body .info {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: var(--sacend-color);
+    color: white;
+    font-weight: bold;
+}
 :root {
     --main-color: white;
     --sacend-color: #ff8000;
