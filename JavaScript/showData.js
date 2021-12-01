@@ -216,6 +216,7 @@ let allZekr = {
     let logo = document.getElementById('logo');
     let backPage1 = document.querySelector('.back-page');
     let backPage2 = document.querySelector('#back-page');
+
     ///  المتغيرات التي تعتمد علي بيانات خارجية 
 
     let date = new Date().getDate();
@@ -298,6 +299,9 @@ let genret = 1;
         content1.style.display = 'none';
     }
 
+
     logo.onclick = () => relo();
     backPage1.onclick = () => relo();
     backPage2.onclick = () => relo();
+
+    console.log(backPage1)
